@@ -11,6 +11,12 @@ const articles = [
 
 function App() {
   const [newArticle, setNewArticle] = useState("");
+
+  const addArticle = (ev) => {
+    ev.preventDefault();
+    console.log(ev);
+  }
+
   return (
     <>
       <div className="container">
@@ -20,11 +26,14 @@ function App() {
             <li key={index} className="list-group-item">{article}</li>
           ))}
         </ul>
-        <form>
+        <form onSubmit={addArticle}>
           <div className="input-group mb-3">
             <input
               value={newArticle}
-              onChange={(e) => { setNewArticle(e.target.value) }}
+              onChange={(ev) => {
+                console.log(ev);
+                setNewArticle(ev.target.value)
+              }}  // ev E' L'EVENTO 
               type="text" className="form-control" placeholder="Nuovo articolo" />
             <button className="btn btn-primary">Aggiungi articolo</button>
           </div>
