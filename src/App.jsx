@@ -10,6 +10,7 @@ const articles = [
 ];
 
 function App() {
+  const [newArticle, setNewArticle] = useState("");
   return (
     <>
       <div className="container">
@@ -21,7 +22,10 @@ function App() {
         </ul>
         <form>
           <div className="input-group mb-3">
-            <input type="text" className="form-control" placeholder="Nuovo articolo" />
+            <input
+              value={newArticle}
+              onChange={(e) => { setNewArticle(e.target.value) }}
+              type="text" className="form-control" placeholder="Nuovo articolo" />
             <button className="btn btn-primary">Aggiungi articolo</button>
           </div>
         </form>
