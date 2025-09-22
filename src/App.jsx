@@ -27,7 +27,7 @@ function App() {
   const [newPost, setNewPost] = useState("");
   const [posts, setPosts] = useState(initialPosts);
 
-  const onHandleSubtmit = (e) => {
+  const onHandleSubmit = (e) => {
     e.preventDefault();
 
     // CREO UN NUOVO OGGETTO
@@ -45,7 +45,7 @@ function App() {
       <div className="container">
         <div className='row gy-4'>
           <div className='col-12'>
-            <h1>React Blog Form</h1>
+            <h1>React Form</h1>
           </div>
           <div className='col-12'>
             {/* VISUALIZZARE LA LISTA DI ARTICOLI */}
@@ -56,7 +56,7 @@ function App() {
                 )
               })}
             </ul>
-            <form onSubmit={onHandleSubtmit}>
+            <form onSubmit={onHandleSubmit}>
               <input type="text" placeholder='Nuovo post' className='form-control'
                 onChange={(e) => { setNewPost(e.target.value) }} />
               <button className='btn btn-primary'>Inserisci</button>
