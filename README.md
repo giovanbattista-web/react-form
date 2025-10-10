@@ -1,5 +1,4 @@
 Esercizio
-
 Milestone 1
 Creare una pagina che visualizzi una lista di articoli (createla voi, va bene un semplice array di stringhe), mostrandone solo il titolo.
 
